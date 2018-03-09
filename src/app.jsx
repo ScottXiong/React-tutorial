@@ -50,6 +50,7 @@ class App extends React.Component {
     return (
         <div>
           <h1>hello world</h1>
+          <i className="fa fa-apple"></i>
           <button onClick={()=>{this.onClickHandle()}}>更新state</button>
         </div>
       )

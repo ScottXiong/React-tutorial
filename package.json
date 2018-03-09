@@ -18,7 +18,7 @@
   "name": "scottxiong",
   "version": "1.0.0",
   "description": "webpack for react",
-  "main": "index.js",
+  "main": "src/app.jsx",
   "repository": "git@gitee.com:ivan_s/webpack-test.git",
   "author": "scottxiong <github.scott.bear@gmail.com>",
   "license": "MIT",
@@ -29,6 +29,6 @@
   },
   "scripts":{
     "dev":"node_modules/.bin/webpack-dev-server --open",
-    "build":"node_modules/.bin/webpack -p"
+    "build":"rm -rf dist && node_modules/.bin/webpack -p"
   }
 }

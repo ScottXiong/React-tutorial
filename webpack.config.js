@@ -10,8 +10,8 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   entry: './src/app.jsx',
   output: {
-    path: path.resolve(__dirname, 'dist'), //找不到字体，设置一层dist
-    publicPath:'/dist/',
+    path: path.resolve(__dirname, 'dist'), //打包的静态资源放入这个文件夹
+    publicPath:'/dist/', //指定字体文件去哪里找
     filename: 'js/app.js'
   },
   module: {
@@ -39,11 +39,7 @@ module.exports = {
         {
         	test: /\.scss$/,
             use: extractSass.extract({
-                use: [{
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }],
+                use: ["css-loader","sass-loader"],
                 // 在开发环境使用 style-loader
                 fallback: "style-loader"
             })
@@ -79,7 +75,8 @@ module.exports = {
   plugins: [
   //处理html文件
 	  new HtmlWebpackPlugin({
-	  	template: './src/template/index.html'
+	  	template: './src/template/index.html',
+      hash: false,
 	  }),
     //独立css文件 
 	  new ExtractTextPlugin("css/[name].css"),
