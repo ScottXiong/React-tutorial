@@ -10,8 +10,8 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   entry: './src/app.jsx',
   output: {
-    path: path.resolve(__dirname, 'dist'), //打包的静态资源放入这个文件夹
-    publicPath:'/dist/', //指定字体文件去哪里找
+    path: path.resolve(__dirname, 'dist'), //打包到哪个文件夹，在当前目录下，在去找dist
+    publicPath:path.resolve(__dirname, 'dist'), //指定字体文件去哪里找
     filename: 'js/app.js'
   },
   module: {
@@ -19,11 +19,11 @@ module.exports = {
 	  //jsx
 	    {
 	      test: /\.jsx$/,
-	      exclude: /(node_modules|bower_components)/,
+	      exclude: /(node_modules|bower_components)/,//对着里面的文件不做处理
 	      use: {
 	          loader: 'babel-loader',
 	          options: {
-	            presets: ['env','react']
+	            presets: ['env','react']//自动鉴别浏览器环境或者node环境
 	          }
 	      }
 	    },
@@ -52,7 +52,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                   limit: 8192,
-                  name:'resource/[name].[ext]'
+                  name:'/resource/[name].[ext]'
                 }
               }
             ]
@@ -65,7 +65,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                   limit: 8192,
-                  name:'resource/[name].[ext]'
+                  name:'/resource/[name].[ext]'
                 }
               }
             ]
