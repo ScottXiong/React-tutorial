@@ -58,3 +58,5 @@ yarn add url-loader@0.6.2 file-loader@1.1.6 --dev
 ```
 yarn add webpack-dev-server@2.9.7 --dev
 ```
+## other reference
+- [tuturial](http://blog.csdn.net/sinat_17775997/article/details/61424829)
