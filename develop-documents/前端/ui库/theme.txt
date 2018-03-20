@@ -1,0 +1,6 @@
+Bootstrap提供了大量的模板，如果你会扣皮肤，那么开发会非常迅速
+1，view page resource 查看网页源代码 copy 用css代码格式化工具
+选项卡变动的内容是子组建的东西
+2,把相应的代码copy到对应的组件中
+Class-》className
+Style-〉全干掉或换成{{}},注意value要加引号，中间用，连接

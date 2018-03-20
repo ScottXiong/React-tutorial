@@ -37,7 +37,7 @@ module.exports = {
       host : '45.32.73.24',
       ref  : 'origin/master',
       repo : 'git@github.com:ScottXiong/React-tutorial.git',
-      path : '/root/2018/',
+      path : '2018',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
@@ -45,7 +45,7 @@ module.exports = {
       host : '127.0.0.1',
       ref  : 'origin/master',
       repo : 'git@github.com:ScottXiong/React-tutorial.git',
-      path : '/Users/scottxiong/desktop/React-tutorial',
+      path : '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
