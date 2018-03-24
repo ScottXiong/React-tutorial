@@ -14,6 +14,12 @@ module.exports = {
     publicPath:path.resolve(__dirname, 'dist'), //指定字体文件去哪里找
     filename: 'js/app.js'
   },
+  resolve:{
+    alias:{
+      page:path.resolve(__dirname, 'src/page'),
+      components:path.resolve(__dirname, 'src/components')
+    }
+  },
   module: {
 	  rules: [
 	  //jsx

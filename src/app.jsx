@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {HashRouter as Router, Route, Link, Redirect,Switch} from 'react-router-dom'
+
 // import 'font-awesome/css/font-awesome.min.css';
 // import './index.css';
 // import './index.scss';
 
+
+//import component
+
+import Home from 'page/home/index.jsx'
+import School from 'page/school/index.jsx'
 //life circle
 
 class App extends React.Component {
@@ -51,7 +58,19 @@ class App extends React.Component {
         <div className="container">
           <h3>hello world <i className="fa fa-apple"></i></h3>
           
-        
+          <a href="#/home" style={{marginRight:'5px'}}>home</a>
+          <a href="#/school">school</a>
+          <Router>
+
+             <Switch>
+               <Route path='/' exact component={Home}/>
+               <Route path='/school' component={School}/>
+               <Redirect path='*' to="/"/>
+             </Switch>
+
+          </Router>
+
+
           <button onClick={()=>{this.onClickHandle()}} className='btn btn-primary'>更新state</button>&nbsp;<i className="fa fa-spinner fa-pulse fa-lg"></i>
         </div>
       )
