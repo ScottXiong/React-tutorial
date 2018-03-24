@@ -52,7 +52,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                   limit: 8192,
-                  name:'/resource/[name].[ext]'
+                  name:'resource/[name].[ext]'
                 }
               }
             ]
@@ -75,7 +75,7 @@ module.exports = {
   plugins: [
   //处理html文件
 	  new HtmlWebpackPlugin({
-	  	template: './src/template/index.html',
+	  	template: './src/index.html',
       hash: false,
 	  }),
     //独立css文件 

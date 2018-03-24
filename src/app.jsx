@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'font-awesome/css/font-awesome.min.css';
-import './index.css';
-import './index.scss';
+// import 'font-awesome/css/font-awesome.min.css';
+// import './index.css';
+// import './index.scss';
 
 //life circle
 
@@ -48,10 +48,11 @@ class App extends React.Component {
    render(){
     console.log('render')
     return (
-        <div>
-          <h1>hello world</h1>
-          <i className="fa fa-apple"></i>
-          <button onClick={()=>{this.onClickHandle()}}>更新state</button>
+        <div className="container">
+          <h3>hello world <i className="fa fa-apple"></i></h3>
+          
+        
+          <button onClick={()=>{this.onClickHandle()}} className='btn btn-primary'>更新state</button>&nbsp;<i className="fa fa-spinner fa-pulse fa-lg"></i>
         </div>
       )
    }
